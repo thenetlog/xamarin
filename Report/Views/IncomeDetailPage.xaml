@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Report.Views.IncomeDetailPage"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="IncomeID:" FontSize="16" />
+            <Label Text="{Binding Item.IncomeId}" FontSize="13"/>
+            <Label Text="Particular:" FontSize="16" />
+            <Label Text="{Binding Item.DonarName}" FontSize="13"/>
+            <Label Text="Amount:" FontSize="16" />
+            <Label Text="{Binding Item.Amount}" FontSize="13"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
