@@ -17,7 +17,7 @@ namespace Report.Services
             items = new List<Income>();
             var mockItems = new List<Income>
             {
-                new Income { IncomeId = "2", TransactionDate = DateTime.Now, DonarName="Income", Amount = "1111" },
+                new Income { IncomeId = "", TransactionDate = DateTime.Now, DonarName="inc1", Amount = "1111" },
 
             };
 

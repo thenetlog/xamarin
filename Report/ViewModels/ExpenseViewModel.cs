@@ -21,12 +21,7 @@ namespace Report.ViewModels
             Items = new ObservableCollection<Expense>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewExpensePage, Expense>(this, "AddItem", async (obj, item) =>
-            {
-                var _item = item as Expense;
-                Items.Add(_item);
-                await DataStores.AddItemAsync(_item);
-            });
+            
         }
 
         async Task ExecuteLoadItemsCommand()
