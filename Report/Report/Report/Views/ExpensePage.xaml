@@ -46,6 +46,7 @@
                        LineBreakMode="NoWrap" 
                        Style="{DynamicResource ListItemTextStyle}" 
                        FontSize="Medium" />
+                      
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using Report.Models;
-
+using Xamarin.Forms;
 
 [assembly: Xamarin.Forms.Dependency(typeof(Report.Services.MockExpense))]
 namespace Report.Services
@@ -12,15 +12,16 @@ namespace Report.Services
     public class MockExpense : IDataStores<Expense>
     {
         List<Expense> expenses;
+        
 
         public MockExpense()
         {
             expenses = new List<Expense>();
-
+            
             var mockItemss = new List<Expense>
             {
-             
-                new Expense { ExpenseId = "1", TransactionDate = DateTime.Now, Particular ="exp1", Amount = "1000" },
+
+                new Expense { ExpenseId = "1", TransactionDate = DateTime.Now, Particular = "exp1", Amount = "1000" },
 
             };
 
@@ -43,6 +44,7 @@ namespace Report.Services
             expenses.Remove(_etem);
 
             return await Task.FromResult(true);
+            
         }
 
         public async Task<Expense> GetItemAsynce(string id)
@@ -63,5 +65,7 @@ namespace Report.Services
 
             return await Task.FromResult(true);
         }
+
+        
     }
 }

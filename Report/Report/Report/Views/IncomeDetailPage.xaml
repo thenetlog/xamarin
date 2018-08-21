@@ -4,14 +4,19 @@
              x:Class="Report.Views.IncomeDetailPage"
              Title="{Binding Title}">
 
-    <ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Update" Clicked="UpdateClicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content ItemsSource="{Binding item}">
         <StackLayout>
             <Label Text="IncomeID:" FontSize="Medium" />
             <Label Text="{Binding Item.IncomeId}" FontSize="Medium"/>
             <Label Text="Particular:" FontSize="Medium" />
-            <Label Text="{Binding Item.DonarName}" FontSize="Medium"/>
+            <Entry Text="{Binding Item.DonarName}" FontSize="Medium"/>
             <Label Text="Amount:" FontSize="Medium" />
-            <Label Text="{Binding Item.Amount}" FontSize="Medium"/>
+            <Entry Text="{Binding Item.Amount}" FontSize="Medium" Keyboard="Numeric"/>
+            <Button Text="Delete" Clicked="DeleteClicked" BackgroundColor="Black" TextColor="YellowGreen"/>
         </StackLayout>
     </ContentPage.Content>
 

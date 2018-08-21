@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Report.Models;
 
 namespace Report.Services
 {
@@ -11,5 +12,6 @@ namespace Report.Services
         Task<bool> DeleteItemAsynce(string id);
         Task<T> GetItemAsynce(string id);
         Task<IEnumerable<T>> GetItemsAsynce(bool forceRefresh = false);
+        
     }
 }

@@ -17,12 +17,15 @@ namespace Report.Views
     public partial class ExpensePage : ContentPage
     {
         ExpenseViewModel viewModel;
+        //test
+        //List<Expense> expenses;
 
         public ExpensePage()
         {
             InitializeComponent();
 
             BindingContext = viewModel = new ExpenseViewModel();
+            //expenses = new List<Expense>();
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -49,5 +52,7 @@ namespace Report.Views
             if (viewModel.Expenses.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
         }
+
+        
     }
 }

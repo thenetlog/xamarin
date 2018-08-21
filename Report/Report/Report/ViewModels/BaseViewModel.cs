@@ -12,10 +12,10 @@ namespace Report.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        
         //public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
         public IDataStores<Expense> DataStores => DependencyService.Get<IDataStores<Expense>>() ?? new MockExpense();
-        public IDataStore<Income> DataStore => DependencyService.Get<IDataStore<Income>>() ?? new MockIncome();
-
+        
         bool isBusy = false;
         public bool IsBusy
         {
